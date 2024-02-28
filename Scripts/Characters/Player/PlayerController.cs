@@ -9,15 +9,18 @@ public class PlayerController : MonoBehaviour
     public PlayerInput input;
     public Rigidbody2D rb;
     public float moveSpeed = 1.8f;
-    
-  
+
+    public Transform ammoPosition;
+    [SerializeField] public GameObject[] ammoPrefabs;
+
+    public int currentWeapon;
     
 
     private void Awake()
     {
         input = GetComponent<PlayerInput>();
         rb = GetComponent<Rigidbody2D>();
-        
+        currentWeapon = 0;
        
     }
 
@@ -25,8 +28,23 @@ public class PlayerController : MonoBehaviour
     {
         input.EnableGameplayInputs();
     }
+    private void Update()
+    {
+        changeWeapon();
+    }
 
-   
+    void changeWeapon()
+    {
+        if (Input.GetKeyDown(KeyCode.J))
+        {
+            currentWeapon = 1;
+        }
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            currentWeapon = 0;
+        }
+    }
+
 
     public void SetVelocity(float _xVelocity,float _yVelocity)
     {
