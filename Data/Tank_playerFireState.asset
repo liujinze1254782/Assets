@@ -13,4 +13,9 @@ MonoBehaviour:
   m_Name: Tank_playerFireState
   m_EditorClassIdentifier: 
   stateName: fire
-  FireDuration: 1
+  FireDuration:
+  - 0.1
+  - 1
+  fireSound:
+  - {fileID: 8300000, guid: 5b674249a5e77ad48bac3855ed1cbf0d, type: 3}
+  - {fileID: 0}

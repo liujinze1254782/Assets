@@ -13,8 +13,8 @@ public class Tank_playerMoveState : Tank_playerState
     {
         base.Enter();
         //移动音效需要更换
-       SoundEffectPlayer.audioSource.mute = false ;
-        SoundEffectPlayer.audioSource.PlayOneShot(moveSound);      
+       //SoundEffectPlayer.audioSource.mute = false ;
+       //SoundEffectPlayer.audioSource.PlayOneShot(moveSound);      
     }
 
     public override void LogicUpdate()

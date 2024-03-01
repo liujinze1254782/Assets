@@ -10,7 +10,7 @@ public class Tank_playerIdleState : Tank_playerState
     {
         base.Enter();
         //½«ÒôÔ´²¥·ÅÆ÷¾²Òô
-        SoundEffectPlayer.audioSource.mute = true;
+        //SoundEffectPlayer.audioSource.mute = true;
     }
 
     public override void LogicUpdate()

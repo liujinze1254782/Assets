@@ -7,6 +7,8 @@ public class GunController : MonoBehaviour
 {
     public PlayerInput input;
 
+    public Animator animator;//开火动画转移，目前摆烂
+
     public Transform ammoPosition;
     //子弹的预设数组
     [SerializeField] public GameObject[] ammoPrefabs;

@@ -1,0 +1,6 @@
+3月1号
+将音效功能集中转移到audioController中，audioController挂在playerController同级，利用animation中的addEvent实现对audioController里面音乐函数的调用。
+
+问题：
+audioSource中是否只能保存一个clip,playOneShot是并行播放。
+由于函数调用与动画相关，move只有短短两帧，需要考虑音效播放与其内容的协调。

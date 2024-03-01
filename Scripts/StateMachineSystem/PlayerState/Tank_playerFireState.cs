@@ -15,8 +15,8 @@ public class Tank_playerFireState : Tank_playerState
         gun.ammoNumbers[gun.currentAmmo]--;
         //将currentWeapon所表示的子弹发射出去
         Instantiate(gun.ammoPrefabs[gun.currentAmmo],gun.ammoPosition.position, gun.transform.rotation);
-        SoundEffectPlayer.audioSource.mute = false;
-        SoundEffectPlayer.audioSource.PlayOneShot(fireSound[gun.currentAmmo]);
+        //SoundEffectPlayer.audioSource.mute = false;
+        //SoundEffectPlayer.audioSource.PlayOneShot(fireSound[gun.currentAmmo]);
     }
     public override void LogicUpdate()
     {
