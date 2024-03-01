@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1000833921802350938}
   - component: {fileID: 1000833921802350933}
+  - component: {fileID: 7702696708728195890}
   m_Layer: 0
-  m_Name: basic_black
+  m_Name: TankGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25,8 +26,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1000833921802350932}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.3, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -85,6 +86,29 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7702696708728195890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000833921802350932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 712ee9554a4b50b40b1eae7c48261be3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  input: {fileID: 0}
+  ammoPosition: {fileID: 2876353016104257167}
+  ammoPrefabs:
+  - {fileID: 3788025276769663731, guid: f6ebbe6752bd0476386d05d1aee3a9c1, type: 3}
+  - {fileID: 3788025276769663731, guid: f6ebbe6752bd0476386d05d1aee3a9c1, type: 3}
+  ammoKinds: 0
+  ammoNumbers: 0f00000005000000
+  currentAmmo: 0
+  canFire: 0
+  FireCD: 0.1
+  timer: 0
 --- !u!1 &1000833922525642786
 GameObject:
   m_ObjectHideFlags: 0
@@ -211,10 +235,6 @@ MonoBehaviour:
   input: {fileID: 0}
   rb: {fileID: 0}
   moveSpeed: 1.51
-  ammoPosition: {fileID: 2876353016104257167}
-  ammoDir: {x: 0, y: 0}
-  ammoPrefabs:
-  - {fileID: 0}
 --- !u!114 &1341176768746757962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -295,7 +315,7 @@ Transform:
   m_GameObject: {fileID: 6872670830329363658}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.81, y: 0, z: 0}
+  m_LocalPosition: {x: 1.025, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

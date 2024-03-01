@@ -8,11 +8,13 @@ using static UnityEngine.RuleTile.TilingRuleOutput;
 public class Tank_playerMoveState : Tank_playerState
 {
     public float direction;
+    public AudioClip moveSound;
     public override void Enter()
     {
         base.Enter();
-        
-       
+        //移动音效需要更换
+       SoundEffectPlayer.audioSource.mute = false ;
+        SoundEffectPlayer.audioSource.PlayOneShot(moveSound);      
     }
 
     public override void LogicUpdate()
@@ -22,7 +24,7 @@ public class Tank_playerMoveState : Tank_playerState
         {
             stateMachine.SwitchState(typeof(Tank_playerIdleState));
         }
-        if (input.fire)
+        if (input.fire && gun.canFire)
         {
             stateMachine.SwitchState(typeof(Tank_playerFireState));
         }

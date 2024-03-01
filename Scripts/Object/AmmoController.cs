@@ -12,4 +12,11 @@ public class AmmoController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = transform.right * Speed;
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        
+
+
+    }
 }

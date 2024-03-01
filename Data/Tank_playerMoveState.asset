@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Tank_playerMoveState
   m_EditorClassIdentifier: 
   stateName: Move
+  direction: 0

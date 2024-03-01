@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Tank_playerFireState
   m_EditorClassIdentifier: 
   stateName: fire
-  FireDuringtime: 1
+  FireDuration: 1

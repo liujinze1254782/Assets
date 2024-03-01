@@ -12,18 +12,21 @@ public class Tank_playerStateMachine : StateMachine
     Animator animator;
     PlayerInput input;
     PlayerController player;
+    GunController gun;
+    
 
     private void Awake()
     {
         animator = GetComponentInChildren<Animator>();
         input = GetComponent<PlayerInput>();
         player = GetComponent<PlayerController>();
-
+        gun = GetComponentInChildren<GunController>();
+        
         stateTable = new Dictionary<System.Type, IState>(states.Length);
 
         foreach(Tank_playerState state in states)
         {
-            state.Iniatialize(animator,player, this, input);
+            state.Iniatialize(animator,player, this, input,gun);
             stateTable.Add(state.GetType(), state);
         }
     }

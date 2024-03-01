@@ -12,7 +12,7 @@ public class PlayerInput : MonoBehaviour
    
     public bool Move => axis.x!=0f || axis.y!=0f;
 
-    
+    public bool changeWeapon => control.PlayerInput.ChangeWeapon.WasPerformedThisFrame();
 
     public float xInput => axis.x;
     public float yInput => axis.x != 0 ? 0 : axis.y;
