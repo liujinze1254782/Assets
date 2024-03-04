@@ -6,21 +6,20 @@ using UnityEngine;
 public class GunController : MonoBehaviour
 {
     public PlayerInput input;
-
     public Animator animator;//开火动画转移，目前摆烂
-
     public Transform ammoPosition;
-    //子弹的预设数组
-    [SerializeField] public GameObject[] ammoPrefabs;
-    //子弹的种类数
-    public int ammoKinds;
-    [SerializeField] public int[] ammoNumbers;
-    //当前使用的子弹编号
-    public int currentAmmo;
-    //判断能否发射
+
+    [Header("Ammo Info")]
+    [SerializeField] public GameObject[] ammoPrefabs;//子弹的预设数组
+    public int ammoKinds;    //子弹的种类数
+    [SerializeField] public int[] ammoNumbers;//子弹量
+    public int currentAmmo;    //当前使用的子弹编号,被fireState调用
+    [Space]
+    [Header("FireCheck")]
     public bool canFire;
-    //设定连发间隔
     public float FireCD=0.1f;
+
+
     //设定连发计时器
     public float timer;
     //记录gun的旋转
@@ -45,7 +44,7 @@ public class GunController : MonoBehaviour
     }
 
 
-
+    //下一个武器
     void changeWeapon()
     {
         if (input.changeWeapon)

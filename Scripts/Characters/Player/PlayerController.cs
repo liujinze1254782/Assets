@@ -8,8 +8,11 @@ public class PlayerController : MonoBehaviour
 {
     public PlayerInput input;
     public Rigidbody2D rb;
+
     //坦克的移动速度
     public float moveSpeed = 1.8f;
+
+    //挂载枪炮管理器
     public GunController gun;
 
     private void Awake()
@@ -31,9 +34,9 @@ public class PlayerController : MonoBehaviour
       
     }
 
-   
 
 
+    #region Velocity
     public void SetVelocity(float _xVelocity,float _yVelocity)
     {
         if (_xVelocity > 0)
@@ -52,5 +55,6 @@ public class PlayerController : MonoBehaviour
     {
         SetVelocity(0f,0f);
     }
+    #endregion
 
 }

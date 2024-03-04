@@ -27,7 +27,6 @@ public class Tank_playerState : ScriptableObject, IState
     {
         statetime = Time.time;
         animator.Play(stateName);
-        
     }
 
     public virtual void Exit()
